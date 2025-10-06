@@ -29,7 +29,7 @@ public class Main {
         System.out.println(house5);
         System.out.println(house23);
 
-        System.out.println("\n=== Задача 2.4 Сотрудники и отделы ===\n");
+        System.out.println("\nЗадача 2.4 Сотрудники и отделы\n");
 
         Employee petrov = new Employee("Петров");
         Employee kozlov = new Employee("Козлов");
