@@ -1,23 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Задача 1.3 и 4.5 работа с именами");
+        System.out.println("Задача 1.3  работа с именами");
 
-        //  Клеопатра (только личное имя)
         Name name1 = new Name("Клеопатра");
-
-        //  Александр Сергеевич Пушкин (все три параметра)
-        Name name2 = new Name("Александр", "Пушкин", "Сергеевич");
-
-        //  Владимир Маяковский (личное имя и фамилия)
-        Name name3 = new Name("Владимир", "Маяковский");
-
-        //  Христофор Бонифатьевич (личное имя и фамилия)
-        Name name4 = new Name("Христофор", "Бонифатьевич");
+        Name name2 = new Name("Пушкин", "Александр", "Сергеевич");
+        Name name3 = new Name("Маяковский", "Владимир");
 
         System.out.println("1. " + name1);
         System.out.println("2. " + name2);
         System.out.println("3. " + name3);
-        System.out.println("4. " + name4);
 
         System.out.println("\nЗадача 1.5 Работа с этажами домов.");
 
@@ -29,35 +20,65 @@ public class Main {
         System.out.println(house5);
         System.out.println(house23);
 
-        System.out.println("\nЗадача 2.4 Сотрудники и отделы\n");
+        System.out.println("\nЗадача 2.4 Сотрудники и отделы");
 
-        Employee petrov = new Employee("Петров");
-        Employee kozlov = new Employee("Козлов");
-        Employee sidorov = new Employee("Сидоров");
+        Employee petrov1 = new Employee("Петров");        // изменил имена
+        Employee kozlov1 = new Employee("Козлов");        // изменил имена
+        Employee sidorov1 = new Employee("Сидоров");      // изменил имена
 
-        Department itDepartment = new Department("IT");
+        Department itDepartment1 = new Department("IT");  // изменил имя
 
-        petrov.setDepartment(itDepartment);
-        kozlov.setDepartment(itDepartment);
-        sidorov.setDepartment(itDepartment);
+        petrov1.setDepartment(itDepartment1);
+        kozlov1.setDepartment(itDepartment1);
+        sidorov1.setDepartment(itDepartment1);
 
-        itDepartment.setBoss(kozlov);
+        itDepartment1.setBoss(kozlov1);
 
-        System.out.println("1. " + petrov);
-        System.out.println("2. " + kozlov);
-        System.out.println("3. " + sidorov);
+        System.out.println("1. " + petrov1);
+        System.out.println("2. " + kozlov1);
+        System.out.println("3. " + sidorov1);
+
+        System.out.println("\nЗадача 3.4 Сотрудники и отделы");
+
+        Employee2 petrov2 = new Employee2("Петров");      // изменил имена
+        Employee2 kozlov2 = new Employee2("Козлов");      // изменил имена
+        Employee2 sidorov2 = new Employee2("Сидоров");    // изменил имена
+
+        Department2 itDepartment2 = new Department2("IT"); // изменил имя
+
+        petrov2.setDepartment(itDepartment2);
+        kozlov2.setDepartment(itDepartment2);
+        sidorov2.setDepartment(itDepartment2);
+
+        itDepartment2.setBoss(kozlov2);
+
+        System.out.println("1. " + petrov2);
+        System.out.println("2. " + kozlov2);
+        System.out.println("3. " + sidorov2);
 
         System.out.println("\nСписок сотрудников отдела IT (через Петрова):");
-        Employee[] colleagues = petrov.getColleagues();
+        Employee2[] colleagues = petrov2.getColleagues();
         for (int i = 0; i < colleagues.length; i++) {
             System.out.println(" - " + colleagues[i].getName());
         }
 
         System.out.println("\nСписок сотрудников отдела IT (через Козлова):");
-        Employee[] colleagues2 = kozlov.getColleagues();
+        Employee2[] colleagues2 = kozlov2.getColleagues();
         for (int i = 0; i < colleagues2.length; i++) {
             System.out.println(" - " + colleagues2[i].getName());
         }
+
+        System.out.println("\nЗадача 4.5 Работа с именами.");
+
+        PersonName name12 = new PersonName("Клеопатра");
+        PersonName name23 = new PersonName("Александр", "Пушкин", "Сергеевич");
+        PersonName name34 = new PersonName("Владимир", "Маяковский");
+        PersonName name45 = new PersonName("Христофор", "Бонифатьевич");
+
+        System.out.println("1. " + name12);
+        System.out.println("2. " + name23);
+        System.out.println("3. " + name34);
+        System.out.println("4. " + name45);
 
         System.out.println("\nЗадача 5.5 Работа с дробями.");
 
@@ -103,7 +124,5 @@ public class Main {
         System.out.println(f1.add(f2).div(f3) + " - 5 = " + chainResult);
 
         System.out.println("\nИтоговый результат цепочки: " + chainResult);
-
-
     }
 }
